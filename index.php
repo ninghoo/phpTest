@@ -11,10 +11,10 @@
     //print("<LI>" . date("l", $currentDate) . "\n");
     echo date("r") . "<br>";
 
-    print("<B>距离星期二还有几天？</B>\n");
+    print("<B>距离星期三还有几天？</B>\n");
     print("<OL>\n");
     for($currentDate = date("U");           //定义$currentDate时间格式
-        date("l", $currentDate) != "Tuesday";    //判断是不是当前系统时间是Monday
+        date("l", $currentDate) != "Wednesday";    //判断是不是当前系统时间是xxday
         $currentDate += (60 * 60 * 24))     //当前时间加上1天
     {
 
