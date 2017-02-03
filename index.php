@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>for的高级运用</TITLE>
+<TITLE>data()的高级运用</TITLE>
 </HEAD>
 <BODY>
 <?php
@@ -11,16 +11,15 @@
     //print("<LI>" . date("l", $currentDate) . "\n");
     echo date("r") . "<br>";
 
-    print("<B>距离星期一还有几天？</B>\n");
+    print("<B>距离星期二还有几天？</B>\n");
     print("<OL>\n");
     for($currentDate = date("U");           //定义$currentDate时间格式
-        date("l", $currentDate) != "Monday";    //判断是不是当前系统时间是Monday
+        date("l", $currentDate) != "Tuesday";    //判断是不是当前系统时间是Monday
         $currentDate += (60 * 60 * 24))     //当前时间加上1天
     {
-        /* 
-        ** 打印时间名称 
-        */
-        print("<LI>" . date("l", $currentDate) . "\n");
+
+       //打印时间 
+       print("<LI>" . date("l", $currentDate) . "\n");
     }
 
     print("</OL>\n");
